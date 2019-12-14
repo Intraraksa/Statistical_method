@@ -19,3 +19,6 @@ class basic_static:
     def varian(self):
         diff_var = sum((np.array(self.var)-self.mean())**2)
         return diff_var/(np.array(self.var)).shape[0]
+    def std_div(self):
+        value = np.sqrt(self.varian())
+        return value
