@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import random
 
 class t_dist:
@@ -12,3 +12,6 @@ class t_dist:
         return np.mean(self.var)
     def xbar(self):
         return np.mean(self.shuffle())
+    def t(self):
+        dif_mean = self.xbar()-self.mu()
+        return dif_mean/(np.std(self.shuffle())/np.sqrt(len(self.shuffle())))
