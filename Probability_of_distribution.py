@@ -7,6 +7,7 @@ Created on Thu Dec 19 09:52:30 2019
 
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 
 class norm_dist:
     def __init__(self,var):
@@ -24,3 +25,6 @@ class norm_dist:
             second = np.exp(-0.5*((self.var[:,i]-self.mu())/self.mu())**2)
             ans.append(first*second)
         return ans
+    def graph(self):
+        return plt.plot(self.prob_normal())
+    
