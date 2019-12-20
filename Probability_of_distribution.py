@@ -25,6 +25,8 @@ class norm_dist:
             second = np.exp(-0.5*((self.var[:,i]-self.mu())/self.mu())**2)
             ans.append(first*second)
         return ans
+    def z_score(self):
+        return (self.var*self.mu())/self.std()
     def graph(self):
         return plt.plot(self.prob_normal())
     
